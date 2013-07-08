@@ -6,6 +6,12 @@ Copy the router.php file into your Magento root directory. When starting PHP's w
 php -S 127.0.0.1:8080 router.php
 ```
 
+To install from a shell installer (to script in a deployment, for instance):
+
+```bash
+curl -sS https://raw.github.com/philwinkle/Magento-PHP-Webserver-Router/master/install.sh | bash
+```
+
 ------
 
 Special thanks to www.twitter.com/sonassi for their help in getting this set up.

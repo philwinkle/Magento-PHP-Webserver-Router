@@ -6,6 +6,12 @@ Copy the router.php file into your Magento root directory. When starting PHP's w
 php -S 127.0.0.1:8080 router.php
 ```
 
+To enable developer mode (for example, in Magento 2 below) use the following which sets the EnvVar:
+
+```bash
+MAGE_MODE=developer php -d variables_order=EGPCS -S 127.0.0.1:8080 router.php
+```
+
 To install from a shell installer (to script in a deployment, for instance):
 
 ```bash

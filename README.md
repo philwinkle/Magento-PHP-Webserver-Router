@@ -15,7 +15,7 @@ MAGE_MODE=developer php -d variables_order=EGPCS -S 127.0.0.1:8080 router.php
 To install from a shell installer (to script in a deployment, for instance):
 
 ```bash
-curl -sS https://raw.github.com/philwinkle/Magento-PHP-Webserver-Router/master/install.sh | bash
+curl -sS https://raw.githubusercontent.com/philwinkle/Magento-PHP-Webserver-Router/master/install.sh | bash
 ```
 
 ------

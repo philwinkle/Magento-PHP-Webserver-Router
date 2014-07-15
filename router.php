@@ -1,12 +1,14 @@
 <?php
 
-if (preg_match('#^/api/rest#', $_SERVER["REQUEST_URI"])) {
-  $_SERVER["REQUEST_URI"] = 'api.php?type=rest';
-} elseif (preg_match('#^/(media|skin|js)#', $_SERVER["REQUEST_URI"])) {
-  return false;
-} elseif (file_exists(".".explode('?',$_SERVER["REQUEST_URI"])[0]))  {
-  return false;
+$ru = strtolower($_SERVER['REQUEST_URI']);
+
+if (strpos($ru, '/api/rest') === 0) {
+    $_SERVER['REQUEST_URI'] = 'api.php?type=rest';
+} elseif (strpos($ru, '/media') === 0 || strpos($ru, '/skin') === 0 || strpos($ru, '/js') === 0) {
+    return FALSE;
+} elseif (file_exists('.' . explode('?', $ru)[0])) {
+    return FALSE;
 } else {
-  include_once 'index.php';
+    include_once 'index.php';
 }
 
